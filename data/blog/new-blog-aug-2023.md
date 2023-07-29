@@ -1,0 +1,22 @@
+---
+title: My new blog
+date: 2023-08-01
+tags: ['blog']
+draft: false
+summary: My new blog
+---
+
+I'm in the process of converting my blog from Gatsby.js to Next.js using a [template](https://github.com/timlrx/tailwind-nextjs-starter-blog) created by Timothy Lin ([timlrx](https://www.timlrx.com/)). I'm currently migrating the `.md` files from the old blog to the new one.
+
+So far, since I have content I need to get created, I haven't made any changes to the template other than substituting information about [timlrx](https://www.timlrx.com/) with mine.
+
+## Frontmatter
+
+My Gatsby blog had some frontmatter fields in common with the new blog but other than `title` they were named different. For example, `publishedDate` is now `date`. I also had some custom fields that for now I'm not going to bring across. It likely isn't worth your time looking at but in the event it is, [here is a mapping from old to new frontmatter](https://github.com/klequis/blog/wiki/Migrating-from-old-site)
+
+## `.md` to `.mdx`
+
+Since my existing files have not JSX in them I could leave the file extension as `.md` but decided to make them all `.mdx` to be consistent.
+
+## Not needed?
+mdx supports [CommonMark](https://spec.commonmark.org/current/) markdown syntax and thus does not support all markdown syntax extensions supported by [GitHub flavored markdown](https://github.github.com/gfm/). This additional syntax can be added via the [`remark-gmf`](https://github.com/remarkjs/remark-gfm). For more information on this subject [see the README for `remark-gmf`](https://github.com/remarkjs/remark-gfm).

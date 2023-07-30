@@ -60,7 +60,6 @@ As you can see from the response in the image below, there are no restrictions o
 ![authentication not enabled message](static/images/authentication-not-enabled-message.png
 )
 
-
 ---
 
 > We will be using the Mongo Shell. If you are not familiar with it see [The Mongo Shell](https://docs.mongodb.com/manual/mongo/).
@@ -86,18 +85,17 @@ use admin
 ```console
 switched to db admin
 ```
+
 > You will see a `switched to db xyz` each time you use the `use` command.
 
 Now use `createUser()` to create 'superUser' with the [root role](https://docs.mongodb.com/manual/reference/built-in-roles/#root).
 
 ```js
-db.createUser(
-  {
-    user: "superUser",
-    pwd: "karl",
-    roles: [ "root" ]
-  }
-)
+db.createUser({
+  user: 'superUser',
+  pwd: 'karl',
+  roles: ['root'],
+})
 ```
 
 **Response:**
@@ -117,7 +115,7 @@ To enable authentication you need to modify a line in the `mongo.service` file.
 
 > In the steps below use [GNU Nano](https://www.nano-editor.org/). However, you can use any editor you are comfortable with. If you want to know more about Nano, [visit its documentation](https://www.nano-editor.org/dist/latest/nano.html).
 
-Exit the Mongo Shell by pressing <kbd>ctrl+c</kbd>
+Exit the Mongo Shell by pressing <tag><kbd>ctrl+c</kbd></tag>
 
 Use Nano to edit the file.
 
@@ -182,6 +180,7 @@ MongoDB server version: 4.0.10
 If you are already in the Mongo Shell, exit using <kbd>ctrl-c</kbd>.
 
 Use the below command to login as 'superUser'. The command options are:
+
 - `-u superUser`: Login as user 'superUser'.
 - `-p`: Prompt for password.
 - `--authenticationDatabase admin`: Authenticate using the `admin` database.
@@ -215,13 +214,11 @@ Now create testUser. The command specifies:
 Create 'testUser'
 
 ```js
-db.createUser(
-  {
-    user: "testUser",
-    pwd: "karl",
-    roles: [ { role: "readWrite", db: "todo-test" } ]
-  }
-)
+db.createUser({
+  user: 'testUser',
+  pwd: 'karl',
+  roles: [{ role: 'readWrite', db: 'todo-test' }],
+})
 ```
 
 **Response:**
@@ -272,6 +269,7 @@ db.todos.insertOne({ title: 'todo1', completed: false })
 ```
 
 Read the inserted todo.
+
 ```js
 db.todos.find()
 ```
@@ -299,13 +297,11 @@ use todo-dev
 Create 'devUser'.
 
 ```js
-db.createUser(
-  {
-    user: "devUser",
-    pwd: "karl",
-    roles: [ { role: "readWrite", db: "todo-dev" } ]
-  }
-)
+db.createUser({
+  user: 'devUser',
+  pwd: 'karl',
+  roles: [{ role: 'readWrite', db: 'todo-dev' }],
+})
 ```
 
 **Response:**
@@ -393,10 +389,13 @@ sudo systemctl enable mongodb // don't start automatically
 // Do not start MongoDB when system starts
 sudo systemctl disable mongodb // start automatically
 ```
+
 ---
 
 # References
+
 - [MongoDB](https://mongodb.com), MongoDB.
+
   - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas), MongoDB.
   - [Authentication Database](https://docs.mongodb.com/manual/core/security-users/#user-authentication-database), MongoDB.
   - [Built-In Roles](https://docs.mongodb.com/manual/reference/built-in-roles/), MongoDB.
@@ -410,6 +409,7 @@ sudo systemctl disable mongodb // start automatically
   - [root role](https://docs.mongodb.com/manual/reference/built-in-roles/#root), MongoDB.
   - [The Mongo Shell](https://docs.mongodb.com/manual/mongo/), MongoDB.
   - [User-Defined roles](https://docs.mongodb.com/manual/core/security-user-defined-roles/), MongoDB.
+
 - [How To Securely Configure a Production MongoDB Server](https://www.digitalocean.com/community/tutorials/how-to-securely-configure-a-production-mongodb-server), DigitalOcean.
 - [GNU Nano](https://www.nano-editor.org/), Nano.
 - [bash](https://www.gnu.org/software/bash/), GNU Operating System.

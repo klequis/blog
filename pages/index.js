@@ -4,15 +4,20 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
-
 import NewsletterForm from '@/components/NewsletterForm'
+import * as R from 'ramda'
+import chkFrontMatter from './chkFrontMatter'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 100
 
+// "fm"/"Fm" = frontMatter
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
-
-  return { props: { posts } }
+  const allPostFm = await getAllFilesFrontMatter('blog')
+  const checks = chkFrontMatter(allPostFm)
+  if (checks.length > 0) {
+    throw new Error(checks)
+  }
+  return { props: { posts: allPostFm } }
 }
 
 export default function Home({ posts }) {

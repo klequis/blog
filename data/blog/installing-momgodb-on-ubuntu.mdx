@@ -1,7 +1,7 @@
 ---
 title: Installing MongoDB on Ubuntu
-publishedDate: '2019-11-28'
-tags: ['MongoDB']
+date: '2019-11-28'
+tags: ['mongodb', 'installing-software', 'ubuntu']
 draft: false
 summary: MongoDB is the 'M' in MERN.
 ---
@@ -56,9 +56,9 @@ mongo
 As you can see from the response in the image below, there are no restrictions on the user. We will address this issue after creating the first user.
 
 <em>click on the image for a larger view</em>
-<br><br>
-![authentication not enabled message](static/images/authentication-not-enabled-message.png
-)
+<br />
+<br />
+![authentication not enabled message](static/images/authentication-not-enabled-message.png )
 
 ---
 
@@ -115,7 +115,7 @@ To enable authentication you need to modify a line in the `mongo.service` file.
 
 > In the steps below use [GNU Nano](https://www.nano-editor.org/). However, you can use any editor you are comfortable with. If you want to know more about Nano, [visit its documentation](https://www.nano-editor.org/dist/latest/nano.html).
 
-Exit the Mongo Shell by pressing <tag><kbd>ctrl+c</kbd></tag>
+Exit the Mongo Shell by pressing <tag>'ctrl+c'</tag>
 
 Use Nano to edit the file.
 
@@ -137,8 +137,8 @@ ExecStart=/usr/bin/mongod --auth --config /etc/mongod.conf
 
 If you are not familiar with Nano, it is keyboard driven. The shortcuts are at the bottom of the editor. To save the file and exit Nano:
 
-- <kbd>ctrl+o</kbd> then <kbd>enter</kbd> to write the file to disk
-- <kbd>ctrl+x</kbd> to exit Nano
+- 'ctrl+o' then 'enter' to write the file to disk
+- 'ctrl+x' to exit Nano
 
 Next you need to reload system level configuration with the command:
 
@@ -177,7 +177,7 @@ MongoDB server version: 4.0.10
 
 ## Login as 'superUser'
 
-If you are already in the Mongo Shell, exit using <kbd>ctrl-c</kbd>.
+If you are already in the Mongo Shell, exit using 'ctrl-c'.
 
 Use the below command to login as 'superUser'. The command options are:
 
@@ -237,7 +237,7 @@ Successfully added user: {
 
 ### Verify 'testUser'
 
-If you are still in the Mongo Shell exit using <kbd>ctrl-c</kbd>
+If you are still in the Mongo Shell exit using 'ctrl-c'
 
 Login as testUser.
 
@@ -320,7 +320,7 @@ Successfully added user: {
 
 ### Verify 'devUser'
 
-If you are still in the Mongo Shell exit using <kbd>ctrl-c</kbd>
+If you are still in the Mongo Shell exit using 'ctrl-c'
 
 Login as 'devUser'
 

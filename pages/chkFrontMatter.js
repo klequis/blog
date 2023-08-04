@@ -45,6 +45,5 @@ function createMsgLn(item) {
 export default function chkFrontMatter(fm) {
   const missing = R.compose(R.filter(notEmpty), R.map(frontMatterHasReqFlds))(fm)
   const a = missing.length === 0 ? [] : R.map(createMsgLn, missing)
-  console.log('a', a)
   return a
 }

@@ -6,7 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import NewsletterForm from '@/components/NewsletterForm'
 import * as R from 'ramda'
-import chkFrontMatter from './chkFrontMatter'
+import chkFrontMatter from '@/lib/chkFrontMatter'
 
 const MAX_DISPLAY = 100
 

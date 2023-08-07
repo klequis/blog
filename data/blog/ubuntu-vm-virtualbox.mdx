@@ -2,11 +2,11 @@
 title: Building a Ubuntu Desktop Virtual Machine with VirtualBox
 date: '2019-09-27'
 tags: ['ubuntu', 'virtual-machine', 'virtual-box']
-draft: true
+draft: false
 summary: There are many reasons to try Linux. Installing it in a virtual machine is a risk free and $$ free way to get started.
 ---
 
-![banner](static/images/ubuntu-vm-virtualbox/hero-blog.png)
+![banner](/static/images/ubuntu-vm-virtualbox/hero-blog.png)
 
 There are many reasons why you may want to build a Linux virtual machine. For me, as an employee of large corporations I was a Windows user for nearly 15 years and used mostly Microsoft development tools. When I left the corporate world and started using non-Microsoft tools I quickly realized that most 'how to' information on the web was for Mac or Linux. I either had to search harder to find Windows information or spend time figuring it out. Not wanting to buy a Mac at that point I tried Linux and have been using it for the past five years. While I originally used Ubuntu in a virtual machine, I eventually removed Windows and installed Ubuntu. I have Windows as a virtual machine because I love Microsoft Excel.
 
@@ -68,18 +68,16 @@ Given how I use a virtual machine I don't really have a need for a host key and 
 - Go to File > Preferences > Input > Virtual Machine
 - Change 'Host Key Combination' to 'None'
 
-![set host key to none](static/images/ubuntu-vm-virtualbox/set-host-key-to-none.png)
+![set host key to none](/static/images/ubuntu-vm-virtualbox/set-host-key-to-none.png)
 
 ## Create the VM
 
 - Open VirtualBox
 - Select Machine > New
 
-![VirtualBox Initial Launch](static/images/ubuntu-vm-virtualbox/virtualbox-initial-launch.png)
+![VirtualBox Initial Launch](/static/images/ubuntu-vm-virtualbox/virtualbox-initial-launch.png)
 
-<div style='text-align: center'>
-<img src='static/images/ubuntu-vm-virtualbox/virtualbox-initial-launch.png' style='max-width: 600px'>
-</div>
+{/* <Image src="/static/images/ubuntu-vm-virtualbox/virtualbox-initial-launch.png" alt="Picture of the author" width={500} height={500} /> */}
 
 ### Name and operating system
 
@@ -89,7 +87,7 @@ Given how I use a virtual machine I don't really have a need for a host key and 
 - Version: Ubuntu (64-bit)
 - Click Next
 
-![Name and operating system](static/images/ubuntu-vm-virtualbox/name-and-operating-system.png)
+![Name and operating system](/static/images/ubuntu-vm-virtualbox/name-and-operating-system.png)
 
 ### Memory Size
 
@@ -98,28 +96,28 @@ How much memory you allocate to the guest machine depends on how much memory you
 - Enter the memory in MB (e.g., 6 \* 1024 MB = 6144 or 6 GB)
 - Click Next
 
-![Memory size](static/images/ubuntu-vm-virtualbox/memory-size.png)
+![Memory size](/static/images/ubuntu-vm-virtualbox/memory-size.png)
 
 ### Hard disk
 
 - Use the default: 'Create a virtual hard disk now'
 - Click Create
 
-![Hard disk](static/images/ubuntu-vm-virtualbox/hard-disk.png)
+![Hard disk](/static/images/ubuntu-vm-virtualbox/hard-disk.png)
 
 ### Hard disk file type
 
 - Use the default: 'VDI (VirtualBox Disk Image)'
 - Click Next
 
-![Hard disk file type](static/images/ubuntu-vm-virtualbox/hard-disk-file-type.png)
+![Hard disk file type](/static/images/ubuntu-vm-virtualbox/hard-disk-file-type.png)
 
 ### Storage and physical hard disk
 
 - Use the default 'Dynamically allocated'
 - Click Next
 
-  ![Storage on physical hard disk](static/images/ubuntu-vm-virtualbox/storage-on-physical-hard-disk.png)
+  ![Storage on physical hard disk](/static/images/ubuntu-vm-virtualbox/storage-on-physical-hard-disk.png)
 
 ### File location and size
 
@@ -129,7 +127,7 @@ How much memory you allocate to the guest machine depends on how much memory you
 - Enter a size (eg. 100.00 GB)
 - Click Create
 
-![File location and size](static/images/ubuntu-vm-virtualbox/file-location-and-size.png)
+![File location and size](/static/images/ubuntu-vm-virtualbox/file-location-and-size.png)
 
 You now have a VM without an operating system. Essentially, it is a computer waiting to have an operating system installed.
 
@@ -139,7 +137,7 @@ A few changes will give you a better VM experience.
 
 Right-click the new VM and select 'Settings...'
 
-![click settings](static/images/ubuntu-vm-virtualbox/click-settings.png)
+![click settings](/static/images/ubuntu-vm-virtualbox/click-settings.png)
 
 ### General > Advanced
 
@@ -147,13 +145,13 @@ Right-click the new VM and select 'Settings...'
 
 This will allow you to copy and paste between the host and guest machines and greatly simplify your workflow.
 
-![general advanced](static/images/ubuntu-vm-virtualbox/general-advanced.png)
+![general advanced](/static/images/ubuntu-vm-virtualbox/general-advanced.png)
 
 ### System > Processor
 
 By default the VM was given one processor. For my machine it says I have 8 CPUs. I actually have 4 cores with 2 threads per core. 2 CPUs is plenty, but feel free to experiment with more.
 
-![system processor](static/images/ubuntu-vm-virtualbox/system-processor.png)
+![system processor](/static/images/ubuntu-vm-virtualbox/system-processor.png)
 
 ### Display > Screen
 
@@ -163,33 +161,33 @@ By default the VM was given one processor. For my machine it says I have 8 CPUs.
 
 > You can also use multiple monitors with the VM. Leave it at one for now.
 
-![display screen](static/images/ubuntu-vm-virtualbox/display-screen.png)
+![display screen](/static/images/ubuntu-vm-virtualbox/display-screen.png)
 
 ## Installing the OS
 
 - In the left pane, double click the the VM you just created or right-click it and click Start
 
-![VM in left hand pane](static/images/ubuntu-vm-virtualbox/vm-created.png)
+![VM in left hand pane](/static/images/ubuntu-vm-virtualbox/vm-created.png)
 
 ### Select start-up disk
 
 - Click the folder icon and navigate to the ubuntu ISO file you downloaded
 - Click Start
 
-![Select a start-up disk](static/images/ubuntu-vm-virtualbox/select-start-up-disk.png)
+![Select a start-up disk](/static/images/ubuntu-vm-virtualbox/select-start-up-disk.png)
 
 ### Welecome
 
 - Choose a language
 - Click Install Ubuntu
 
-![welcome screen](static/images/ubuntu-vm-virtualbox/welcome.png)
+![welcome screen](/static/images/ubuntu-vm-virtualbox/welcome.png)
 
 ### Keyboard layout
 
 - Select your desired keyboard layout and click Continue
 
-![keyboard layout](static/images/ubuntu-vm-virtualbox/keyboard-layout.png)
+![keyboard layout](/static/images/ubuntu-vm-virtualbox/keyboard-layout.png)
 
 ### Updates and other software
 
@@ -204,27 +202,27 @@ With Ubuntu 16.04, the previous long term release, I experienced the build hangi
 - Check 'Install third-party software for graphics and Wi-Fi hardware and additional media formats'
 - Click Continue
 
-![updates and other software](static/images/ubuntu-vm-virtualbox/updates-and-other-software.png)
+![updates and other software](/static/images/ubuntu-vm-virtualbox/updates-and-other-software.png)
 
 ### Installation type
 
 - Take the defaults
 - Click Install Now
 
-![installation type](static/images/ubuntu-vm-virtualbox/installation-type.png)
+![installation type](/static/images/ubuntu-vm-virtualbox/installation-type.png)
 
 ### Write the changes to disks?
 
 - Click Continue
 
-![Write the changes to disk](static/images/ubuntu-vm-virtualbox/write-the-changes-to-disk.png)
+![Write the changes to disk](/static/images/ubuntu-vm-virtualbox/write-the-changes-to-disk.png)
 
 ### Where are you?
 
 - Select your timezone
 - Click Continue
 
-![where are you](static/images/ubuntu-vm-virtualbox/where-are-you.png)
+![where are you](/static/images/ubuntu-vm-virtualbox/where-are-you.png)
 
 ### Who are you?
 
@@ -238,16 +236,16 @@ With Ubuntu 16.04, the previous long term release, I experienced the build hangi
 
 > NOTE: By default, the VM will not accept any incoming requests/connections. I also have a firewall on my host and, no surprise, my local network is behind a router. Additionally, if the host is locked, no one can log into the guest without the host password. Given all of that, I choose the convenience of using a short 4 character not so secret password, as well as 'Log in automatically'.
 
-![Who are you](static/images/ubuntu-vm-virtualbox/who-are-you.png)
+![Who are you](/static/images/ubuntu-vm-virtualbox/who-are-you.png)
 
 ### Installation will now begin.
 
 Ubuntu doesn't take very long to install but you likely have time to make a cup of coffee or tea.
 
-![welcome to ubuntu](static/images/ubuntu-vm-virtualbox/welcome-to-ubuntu.png)
+![welcome to ubuntu](/static/images/ubuntu-vm-virtualbox/welcome-to-ubuntu.png)
 
 Time for a break
-![coffee break](static/images/ubuntu-vm-virtualbox/coffee.gif)
+![coffee break](/static/images/ubuntu-vm-virtualbox/coffee.gif)
 
 <br />
 <hr />
@@ -259,13 +257,13 @@ The installation of Ubuntu is complete.
 
 - Click Restart Now
 
-![installation complete](static/images/ubuntu-vm-virtualbox/installation-copmplete.png)
+![installation complete](/static/images/ubuntu-vm-virtualbox/installation-copmplete.png)
 
 ### Press Enter
 
 You can ignore the message about removing the installation media. Ubuntu doesn't know you are installing it as a virtual machine. It thinks it is being installed from a media such as CD, DVD or USB drive. In our case, just press Enter.
 
-![press-enter](static/images/ubuntu-vm-virtualbox/press-enter.png)
+![press-enter](/static/images/ubuntu-vm-virtualbox/press-enter.png)
 
 ## Software updates
 
@@ -273,13 +271,13 @@ At some point soon after installation, you will soon see a message from the Ubun
 
 > Ubuntu updates are very painless. Other than this initial update, they are usually quick and mostly don't require a restart. I have never had a problem with an update.
 
-![software-updater](static/images/ubuntu-vm-virtualbox/software-updater.png)
+![software-updater](/static/images/ubuntu-vm-virtualbox/software-updater.png)
 
 ## All Done? Not Quite.
 
 You now have a Ubuntu Virtual Machine but need to install VirtualBox 'Guest Additions' which will add crucial features to the VM. The most noticeable of these is that the virtual machine will display full-screen instead of the small box you have seen so far.
 
-![all done](static/images/ubuntu-vm-virtualbox/all-done.png)
+![all done](/static/images/ubuntu-vm-virtualbox/all-done.png)
 
 # Install Guest Additions
 
@@ -295,15 +293,15 @@ sudo apt install build-essential
 
 From the VirtualBox menu select 'Insert Guest Additions CD image...'
 
-![insert guest additions cd image](static/images/ubuntu-vm-virtualbox/insert-guest-additions-cd-image.png)
+![insert guest additions cd image](/static/images/ubuntu-vm-virtualbox/insert-guest-additions-cd-image.png)
 
 Click Run
 
-![do you want to run guest additions](static/images/ubuntu-vm-virtualbox/do-you-want-to-run-ga.png)
+![do you want to run guest additions](/static/images/ubuntu-vm-virtualbox/do-you-want-to-run-ga.png)
 
 You will be asked to enter the current user's password.
 
-![authentication required](static/images/ubuntu-vm-virtualbox/authentication-required.png)
+![authentication required](/static/images/ubuntu-vm-virtualbox/authentication-required.png)
 
 When guest additions is done installing close the terminal and restart the VM.
 
@@ -363,7 +361,7 @@ Then go back to the VirtualBox Manager:
 - Select Shared Folders in the left pane
 - On the right side of the dialog, click the folder button with the '+' sign.
 
-![add shared folder](static/images/ubuntu-vm-virtualbox/add-shared-folder.png)
+![add shared folder](/static/images/ubuntu-vm-virtualbox/add-shared-folder.png)
 
 In the Add Share dialog:
 
@@ -371,7 +369,7 @@ In the Add Share dialog:
 - By default the folder name will be the name of the folder you choose. You can change it if you want.
 - Select **Auto-mount** so that the shared folder is available when the VM starts.
 
-![add share](static/images/ubuntu-vm-virtualbox/add-share.png)
+![add share](/static/images/ubuntu-vm-virtualbox/add-share.png)
 
 - Click OK
 - Click OK in the Shared Folders dialog

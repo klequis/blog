@@ -2,6 +2,17 @@ import Script from 'next/script'
 
 import siteMetadata from '@/data/siteMetadata'
 
+// <!-- Google tag (gtag.js) -->
+// <script async src="https://www.googletagmanager.com/gtag/js?id=G-BG4DBBEM7S"></script>
+// <script>
+
+//   window.dataLayer = window.dataLayer || [];
+//   function gtag(){dataLayer.push(arguments);}
+//   gtag('js', new Date());
+//   gtag('config', 'G-BG4DBBEM7S'); // This is different from what was in the original blog template
+
+// </script>
+
 const GAScript = () => {
   return (
     <>
